@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sooraj G.R - Student Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for hobby icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile-card {
+            background: rgba(255,255,255,0.94);
+            border-radius: 18px;
+            box-shadow: 0 12px 42px rgba(30,60,114,0.20);
+            padding: 48px 36px 40px 36px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            transition: box-shadow 0.3s;
+        }
+        .profile-card:hover {
+            box-shadow: 0 18px 60px rgba(30,60,114,0.30);
+        }
+        .profile-img {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2a5298;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 22px rgba(42,82,152,0.18);
+            transition: transform 0.3s;
+        }
+        .profile-card:hover .profile-img {
+            transform: scale(1.05) rotate(-2deg);
+        }
+        .name {
+            font-size: 2.1em;
+            font-weight: 700;
+            color: #1e3c72;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .course {
+            font-size: 1.15em;
+            color: #546e7a;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        .contact {
+            margin-bottom: 20px;
+            font-size: 1.03em;
+        }
+        .contact a {
+            color: #2a5298;
+            background: #e3ecfa;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact a:hover {
+            background: #2a5298;
+            color: #fff;
+        }
+        .hobbies {
+            margin-top: 28px;
+            text-align: left;
+        }
+        .hobbies-title {
+            font-size: 1.12em;
+            color: #2a5298;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        .hobby-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .hobby-list li {
+            font-size: 1.03em;
+            color: #1e3c72;
+            margin-bottom: 13px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .hobby-list li i {
+            margin-right: 15px;
+            font-size: 1.3em;
+            color: #2a5298;
+            transition: color 0.2s;
+        }
+        .hobby-list li:hover i {
+            color: #1e3c72;
+        }
+        /* Add a subtle animated gradient border */
+        .profile-card::before {
+            content: "";
+            position: absolute;
+            top: -3px; left: -3px; right: -3px; bottom: -3px;
+            border-radius: 24px;
+            background: linear-gradient(120deg, #1e3c72 0%, #2a5298 60%, #1e3c72 100%);
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(4px);
+            animation: borderGlow 4s linear infinite;
+        }
+        @keyframes borderGlow {
+            0% { opacity: 0.5; }
+            50% { opacity: 0.9; }
+            100% { opacity: 0.5; }
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .profile-card {
+                padding: 28px 7vw 24px 7vw;
+            }
+            .profile-img {
+                width: 90px;
+                height: 90px;
+            }
+            .name {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="https://via.placeholder.com/180x180.png?text=Sooraj" alt="Profile Photo" class="profile-img">
+        <div class="name">Sooraj G.R</div>
+        <div class="course">B Tech &mdash; Computer Science</div>
+        <div class="contact">Contact: <a href="tel:8618129884">8618129884</a></div>
+        <div class="hobbies">
+            <div class="hobbies-title">Hobbies</div>
+            <ul class="hobby-list">
+                <li><i class="fas fa-code"></i> Coding</li>
+                <li><i class="fas fa-futbol"></i> Football</li>
+                <li><i class="fas fa-pencil-alt"></i> Drawing</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
